@@ -6,67 +6,245 @@
 <title>DevOps Books Library</title>
 
 <style>
+/* ---------- THEME VARIABLES ---------- */
+:root {
+  --bg: #0b1220;
+  --surface: #111827;
+  --card: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+  --border: #374151;
+}
+
+.light {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --card: #f1f5f9;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #2563eb;
+  --border: #e2e8f0;
+}
+
+/* ---------- BASE ---------- */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f6f8;
   margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
 }
+
+/* ---------- HEADER ---------- */
 header {
-  background: #0f172a;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  padding: 50px 20px 40px;
+  border-bottom: 1px solid var(--border);
 }
-#search {
-  display: block;
-  margin: 20px auto;
-  width: 300px;
-  padding: 10px 15px;
-  border-radius: 25px;
-}
-ul {
-  max-width: 1100px;
+
+.header-inner {
+  max-width: 1400px;
   margin: auto;
-  padding: 20px;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-li {
-  background: #fff;
-  margin-bottom: 8px;
-  border-radius: 6px;
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-a {
-  display: block;
-  padding: 12px 16px;
+
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  max-width: 900px;
+  line-height: 1.6;
+}
+
+/* ---------- CONTROLS ---------- */
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+#search {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  width: 280px;
+}
+
+#search::placeholder {
+  color: var(--muted);
+}
+
+.theme-toggle {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* ---------- GRID ---------- */
+main {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+/* ---------- BOOK CARD ---------- */
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+.card a {
+  color: var(--text);
   text-decoration: none;
-  color: #1e293b;
+  font-weight: 500;
+  line-height: 1.4;
+  word-break: break-word;
 }
-a:hover {
-  background: #eef2ff;
+
+.badge {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  padding: 30px 20px;
+}
+
+.footer-inner {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1400px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 1100px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 800px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
 }
 </style>
 
 <script>
-function search() {
-  const q = document.getElementById('search').value.toLowerCase();
-  document.querySelectorAll('li').forEach(li => {
-    li.style.display = li.innerText.toLowerCase().includes(q) ? '' : 'none';
+/* ---------- SEARCH ---------- */
+function searchBooks() {
+  const q = document.getElementById("search").value.toLowerCase();
+  document.querySelectorAll(".card").forEach(card => {
+    card.style.display = card.innerText.toLowerCase().includes(q) ? "" : "none";
   });
 }
+
+/* ---------- THEME ---------- */
+function toggleTheme() {
+  const root = document.documentElement;
+  const isLight = root.classList.toggle("light");
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+  document.getElementById("themeBtn").innerText = isLight ? "🌙 Dark" : "☀️ Light";
+}
+
+(function initTheme() {
+  const saved = localStorage.getItem("theme");
+  if (saved === "light") {
+    document.documentElement.classList.add("light");
+  }
+})();
 </script>
 </head>
 
 <body>
+
 <header>
-  <h1>📘 DevOps Books Library</h1>
-  <p>Auto-updated on every deployment</p>
+  <div class="header-inner">
+    <div class="top-row">
+      <h1>📘 DevOps Books Library</h1>
+      <button id="themeBtn" class="theme-toggle" onclick="toggleTheme()">☀️ Light</button>
+    </div>
+
+    <p class="subtitle">
+      A curated, auto-updating collection of DevOps, Cloud, Kubernetes,
+      Docker, CI/CD, Terraform, Linux, and SRE books — generated on every deployment.
+    </p>
+
+    <div class="controls">
+      <input
+        id="search"
+        type="text"
+        placeholder="Search books…"
+        onkeyup="searchBooks()"
+      />
+    </div>
+  </div>
 </header>
 
-<input id="search" placeholder="Search books…" onkeyup="search()">
+<main>
+  <div class="grid">
+    {{BOOK_LIST}}
+  </div>
+</main>
 
-<ul>
-{{BOOK_LIST}}
-</ul>
+<footer>
+  <div class="footer-inner">
+    <div>
+      Built with ❤️ by <a href="https://automationexpert.dpdns.org" target="_blank" rel="noopener">AutomationExpert</a>
+    </div>
+    <div>
+      Automatically updated • No tracking • Fast & simple
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
