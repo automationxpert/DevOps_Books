@@ -1,115 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>DevOps Books Library</title>
 
 <style>
 body {
-  margin: 0;
-  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: #f4f6f8;
-  color: #333;
+  margin: 0;
 }
-
 header {
   background: #0f172a;
-  color: #fff;
+  color: white;
   padding: 40px 20px;
   text-align: center;
 }
-
-header h1 {
-  margin: 0;
-  font-size: 2.2rem;
-}
-
-header p {
-  margin-top: 10px;
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
 #search {
-  margin: 20px auto;
   display: block;
+  margin: 20px auto;
   width: 300px;
   padding: 10px 15px;
   border-radius: 25px;
-  border: 1px solid #ccc;
-  font-size: 14px;
 }
-
-ul#files {
-  list-style: none;
-  padding: 20px;
-  max-width: 1200px;
+ul {
+  max-width: 1100px;
   margin: auto;
+  padding: 20px;
+  list-style: none;
 }
-
-ul#files li {
+li {
   background: #fff;
   margin-bottom: 8px;
   border-radius: 6px;
-  transition: background 0.2s;
 }
-
-ul#files li:hover {
-  background: #eef2ff;
-}
-
-ul#files li a {
-  display: flex;
-  justify-content: space-between;
+a {
+  display: block;
   padding: 12px 16px;
   text-decoration: none;
   color: #1e293b;
 }
-
-ul#files .name {
-  font-weight: 500;
-}
-
-ul#files .size,
-ul#files .date {
-  font-size: 0.85rem;
-  color: #64748b;
-}
-
-.highlight {
-  background: #fff59d !important;
+a:hover {
+  background: #eef2ff;
 }
 </style>
 
 <script>
 function search() {
   const q = document.getElementById('search').value.toLowerCase();
-  document.querySelectorAll('#files li').forEach(li => {
-    const name = li.innerText.toLowerCase();
-    li.style.display = name.includes(q) ? '' : 'none';
+  document.querySelectorAll('li').forEach(li => {
+    li.style.display = li.innerText.toLowerCase().includes(q) ? '' : 'none';
   });
 }
 </script>
 </head>
 
 <body>
-
 <header>
   <h1>📘 DevOps Books Library</h1>
-  <p>Docker • Kubernetes • AWS • Terraform • CI/CD • SRE</p>
+  <p>Auto-updated on every deployment</p>
 </header>
 
-<input id="search" type="text" placeholder="Search books…" onkeyup="search()">
+<input id="search" placeholder="Search books…" onkeyup="search()">
 
-<!--
-  IMPORTANT:
-  The server (Express/Nginx/Apache) injects the file list here.
-  DO NOT hardcode anything below.
--->
-<ul id="files">
-  <!-- AUTO-GENERATED FILE LIST -->
+<ul>
+{{BOOK_LIST}}
 </ul>
 
 </body>
