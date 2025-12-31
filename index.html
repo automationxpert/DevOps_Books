@@ -1,163 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Best DevOps Books</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f9fafb;
-      color: #333;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Books Library</title>
 
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
+header {
+  background: #0f172a;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
 
-    header p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: auto;
-    }
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+header p {
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+#search {
+  margin: 20px auto;
+  display: block;
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
 
-    .books {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+ul#files {
+  list-style: none;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .book-card {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
+ul#files li {
+  background: #fff;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
 
-    .book-card h3 {
-      margin-top: 0;
-      color: #0f172a;
-    }
+ul#files li:hover {
+  background: #eef2ff;
+}
 
-    .book-card p {
-      font-size: 0.95rem;
-    }
+ul#files li a {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #1e293b;
+}
 
-    .categories {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 20px;
-    }
+ul#files .name {
+  font-weight: 500;
+}
 
-    .category {
-      background: #e5e7eb;
-      padding: 10px 18px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
+ul#files .size,
+ul#files .date {
+  font-size: 0.85rem;
+  color: #64748b;
+}
 
-    .cta {
-      background: #1d4ed8;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-      margin-top: 60px;
-    }
+.highlight {
+  background: #fff59d !important;
+}
+</style>
 
-    .cta a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 24px;
-      background: white;
-      color: #1d4ed8;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #0f172a;
-      color: #cbd5f5;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.85rem;
-    }
-  </style>
+<script>
+function search() {
+  const q = document.getElementById('search').value.toLowerCase();
+  document.querySelectorAll('#files li').forEach(li => {
+    const name = li.innerText.toLowerCase();
+    li.style.display = name.includes(q) ? '' : 'none';
+  });
+}
+</script>
 </head>
+
 <body>
 
-  <header>
-    <h1>Best DevOps Books</h1>
-    <p>Your curated guide to the most trusted DevOps, SRE, Cloud, and CI/CD books — from beginner to expert.</p>
-  </header>
+<header>
+  <h1>📘 DevOps Books Library</h1>
+  <p>Docker • Kubernetes • AWS • Terraform • CI/CD • SRE</p>
+</header>
 
-  <main class="container">
-    <h2>Featured DevOps Books</h2>
+<input id="search" type="text" placeholder="Search books…" onkeyup="search()">
 
-    <section class="books">
-      <div class="book-card">
-        <h3>The Phoenix Project</h3>
-        <p>A must-read DevOps novel that explains DevOps principles through a real-world story.</p>
-      </div>
-
-      <div class="book-card">
-        <h3>The DevOps Handbook</h3>
-        <p>Practical strategies for CI/CD, automation, and building high-performing teams.</p>
-      </div>
-
-      <div class="book-card">
-        <h3>Site Reliability Engineering</h3>
-        <p>Google’s guide to running reliable, scalable systems in production.</p>
-      </div>
-
-      <div class="book-card">
-        <h3>Kubernetes Up & Running</h3>
-        <p>Learn how to deploy, scale, and manage containerized applications.</p>
-      </div>
-    </section>
-
-    <h2>Explore by Category</h2>
-    <div class="categories">
-      <span class="category">DevOps Fundamentals</span>
-      <span class="category">CI/CD</span>
-      <span class="category">Cloud & AWS</span>
-      <span class="category">Kubernetes</span>
-      <span class="category">SRE</span>
-      <span class="category">Infrastructure as Code</span>
-    </div>
-  </main>
-
-  <section class="cta">
-    <h2>New to DevOps?</h2>
-    <p>Start with beginner-friendly books and build a strong foundation step by step.</p>
-    <a href="#">View Beginner Books</a>
-  </section>
-
-  <footer>
-    © 2025 Best DevOps Books • Learn • Build • Automate
-  </footer>
+<!--
+  IMPORTANT:
+  The server (Express/Nginx/Apache) injects the file list here.
+  DO NOT hardcode anything below.
+-->
+<ul id="files">
+  <!-- AUTO-GENERATED FILE LIST -->
+</ul>
 
 </body>
 </html>
