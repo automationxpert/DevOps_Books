@@ -11,7 +11,9 @@ const files = fs
 
 const listItems = files.map(file => {
   const encoded = encodeURIComponent(file);
-  return `<li><a href="${encoded}" target="_blank">${file}</a></li>`;
+  const displayName = file.replace(/\.pdf$/i, "").replace(/_/g, " "); ; // remove .pdf (case-insensitive) and replace underscores with spaces
+  return `<div class="card">
+  <a href="${encoded}" target="_blank">${displayName}</a></div>`;
 }).join("\n");
 
 const output = TEMPLATE.replace("{{BOOK_LIST}}", listItems);
