@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DevOps Books Library</title>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
+header {
+  background: #0f172a;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+#search {
+  display: block;
+  margin: 20px auto;
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+ul {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  list-style: none;
+}
+li {
+  background: #fff;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #1e293b;
+}
+a:hover {
+  background: #eef2ff;
+}
+</style>
+
+<script>
+function search() {
+  const q = document.getElementById('search').value.toLowerCase();
+  document.querySelectorAll('li').forEach(li => {
+    li.style.display = li.innerText.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+</script>
+</head>
+
+<body>
+<header>
+  <h1>📘 DevOps Books Library</h1>
+  <p>Auto-updated on every deployment</p>
+</header>
+
+<input id="search" placeholder="Search books…" onkeyup="search()">
+
+<ul>
+{{BOOK_LIST}}
+</ul>
+
+</body>
+</html>
