@@ -11,7 +11,7 @@ const files = fs
 
 const listItems = files.map(file => {
   const encoded = encodeURIComponent(file);
-  return `<li><a href="books/${encoded}" target="_blank">${file}</a></li>`;
+  return `<li><a href="${encoded}" target="_blank">${file}</a></li>`;
 }).join("\n");
 
 const output = TEMPLATE.replace("{{BOOK_LIST}}", listItems);
