@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const BOOKS_DIR = path.join(__dirname, "/");
+const BOOKS_DIR = path.join(__dirname, "books/");
 const TEMPLATE = fs.readFileSync("template.html", "utf8");
 
 const files = fs
