@@ -31,59 +31,59 @@ Initially created by [Rohit Ghumare](https://github.com/rohitg00/) on [Twitter](
 
 ### A
 
-* [Ansible Best Practices](Ansible%20Best%20Practices.pdf)
-* [Ansible Configuration Management, 2nd Edition.pdf](Ansible%20Configuration%20Management%2C%202nd%20Edition.pdf)
-* [Ansible for DevOps](none%202.pdf)
-* [Ansible Works QuickStart.pdf](AnsibleWorksQuickStart.pdf)
-* [Ansible Playbook Essentials.pdf](Ansible%20Playbook%20Essentials.pdf)
+* [Ansible Best Practices](books/Ansible_Best_Practices.pdf)
+* [Ansible Configuration Management, 2nd Edition.pdf](books/Ansible_Configuration_Management_2nd_Edition.pdf)
+* [Ansible for DevOps](books/Ansible_For_Devops.pdf)
+* [Ansible Works QuickStart.pdf](books/Ansible_Works_Quickstart.pdf)
+* [Ansible Playbook Essentials.pdf](books/Ansible_Playbook_Essentials.pdf)
 * [Ansible From Beginner to Pro](https://media-exp1.licdn.com/dms/document/C4D1FAQFeyFFmY5TGlg/feedshare-document-pdf-analyzed/0/1660694861085?e=1661385600&v=beta&t=JeYl2FzTmoW-OOi44ECWnNPB4Q0Ae5ODDH4C-ahTlqk)
-* [Ansible Up and Running.pdf](Ansible_%20Up%20and%20Running.pdf)
-* [Ansible Playbook Creds Practices](Ansible-playbook-creds.pdf)
-* [Api Driven DevOps](Api-driven-devops.pdf)
-* [Application Lifecycle on AWS](Application%20Lifecycle%20on%20AWS.pdf)
+* [Ansible Up and Running.pdf](books/Ansible_Up_And_Running.pdf)
+* [Ansible Playbook Creds Practices](books/Ansible_Playbook_Creds_Practices.pdf)
+* [Api Driven DevOps](books/Api_Driven_Devops.pdf)
+* [Application Lifecycle on AWS](books/Application_Lifecycle_On_Aws.pdf)
 * [AWS Associate Solutions Architect Study - ACloud.Guru](https://media-exp1.licdn.com/dms/document/C4D1FAQFSHSI3QdObwQ/feedshare-document-pdf-analyzed/0/1660694867624?e=1661385600&v=beta&t=xL3BbO3tcwckenG6zyF0HSSjGZ-E_HHHmwy4V6SmKpw)
-* [AWS CLI Ebook](Aws-cli%20ebook.pdf)
-* [Azure DevOps](Azure%20DevOps.pdf)
-* [Azure Fundamentals](Azure%20Fundamentals.pdf)
+* [AWS CLI Ebook](books/Aws_Cli_Ebook.pdf)
+* [Azure DevOps](books/Azure_Devops.pdf)
+* [Azure Fundamentals](books/Azure_Fundamentals.pdf)
 
 ### B
 
-* [Borg, omega, kubernetes.pdf](borg%2C%20omega%2C%20kubernetes.pdf)
-* [Building and Enterprise Cloud with Dummies](Building%20and%20Enterprise%20Cloud%20with%20Dummies.pdf)
+* [Borg, omega, kubernetes.pdf](books/Borg_Omega_Kubernetes.pdf)
+* [Building and Enterprise Cloud with Dummies](books/Building_And_Enterprise_Cloud_With_Dummies.pdf)
 
 ### C
 
-* [CKAD Preparation](CKAD%20preparation.pdf)
-* [Container-Networking-Docker-Kubernetes.pdf](Container-Networking-Docker-Kubernetes.pdf)
-* [Container with Docker and K8s](Container%20with%20docker%20and%20k8s.pdf)
-* [Containers on AWS](Containers%20on%20AWS.pdf)
-* [Containers Dummies](Containers-dummies.pdf)
-* [CI/CD Project AWS](CICD%20PROJECT%20ON%20AWS%20.pdf)
+* [CKAD Preparation](books/Ckad_Preparation.pdf)
+* [Container-Networking-Docker-Kubernetes.pdf](books/Container_Networking_Docker_Kubernetes.pdf)
+* [Container with Docker and K8s](books/Container_With_Docker_And_K8s.pdf)
+* [Containers on AWS](books/Containers_On_Aws.pdf)
+* [Containers Dummies](books/Containers_Dummies.pdf)
+* [CI/CD Project AWS](books/Cicd_Project_Aws.pdf)
 
 ### D
 
-* [Deploy on AWS-Gitlab](Deploy%20on%20AWS-Gitlab.pdf)
-* [Devops in Practice](DevOps%20in%20Pratice.pdf)
-* [Devops Document Vinay Hegde](devops-document-vinay_hegde.pdf)
-* [Devops Handbook](devops-handbook.pdf)
-* [Devops Tools Guide](Devops%20Tools%20Guide.pdf)
-* [Docker by Federico](Docker%20by%20federico.pdf)
+* [Deploy on AWS-Gitlab](books/Deploy_On_Aws_Gitlab.pdf)
+* [Devops in Practice](books/Devops_In_Practice.pdf)
+* [Devops Document Vinay Hegde](books/Devops_Document_Vinay_Hegde.pdf)
+* [Devops Handbook](books/Devops_Handbook.pdf)
+* [Devops Tools Guide](books/Devops_Tools_Guide.pdf)
+* [Docker by Federico](books/Docker_By_Federico.pdf)
 * [Docker Cheatsheet](https://media-exp1.licdn.com/dms/document/C4D1FAQHa9dsGbKE7mg/feedshare-document-pdf-analyzed/0/1660642662781?e=1661385600&v=beta&t=kqhcnig0jP2RBRm9HNOzyrqXs4wqjyC1IECd9LCOB-E)
-* [Docker-Cookbook.pdf](Docker-Cookbook.pdf)
-* [Docker Deep Dive Zero to Docker in a single book (Nigel Poulton)](Docker%20Deep%20Dive%20Zero%20to%20Docker%20in%20a%20single%20book%20(Nigel%20Poulton)%20(z-lib.org).pdf)
-* [Docker_Up_and_Running.pdf](Docker_Up_and_Running.pdf)
-* [Docker-in-Practice.pdf](Docker-in-Practice.pdf)
-* [Docker QnA by Vijay](Docker%20QnA%20vijay.pdf)
-* [Docker Ebook](Docker_eBook.pdf)
-* [Dive into the Future of Infrastructure - K8s](Dive%20into%20the%20Future%20of%20Infrastructure%20-%20K8s.pdf)
-* [DAY ONE - AMAZON WEB SERVICES](DAY_ONE_AMAZON%20WEB%20SERVICES.pdf)
-* [Extending_Docker.pdf](Extending_Docker.pdf)
+* [Docker-Cookbook.pdf](books/Docker_Cookbook.pdf)
+* [Docker Deep Dive Zero to Docker in a single book (Nigel Poulton)](books/Docker_Deep_Dive_Zero_To_Docker_In_A_Single_Book.pdf)
+* [Docker_Up_and_Running.pdf](books/Docker_Up_And_Running.pdf)
+* [Docker-in-Practice.pdf](books/Docker_In_Practice.pdf)
+* [Docker QnA by Vijay](books/Docker_Qna_By_Vijay.pdf)
+* [Docker Ebook](books/Docker_Ebook.pdf)
+* [Dive into the Future of Infrastructure - K8s](books/Dive_Into_The_Future_Of_Infrastructure_K8s.pdf)
+* [DAY ONE - AMAZON WEB SERVICES](books/Day_One_Amazon_Web_Services.pdf)
+* [Extending_Docker.pdf](books/Extending_Docker.pdf)
 
 ### G
 
-* [GIT Notes for Professionals](GIT%20notes%20for%20professionals.pdf)
-* [Github Cheatsheets](GitHub.Git.Cheatsheet.pdf)
-* [Getting_Started_with_OpenShift.pdf](Getting_Started_with_OpenShift.pdf)
+* [GIT Notes for Professionals](books/Git_Notes_For_Professionals.pdf)
+* [Github Cheatsheets](books/Github_Cheatsheets.pdf)
+* [Getting_Started_with_OpenShift.pdf](books/Getting_Started_With_Openshift.pdf)
 
 ### H
 
@@ -91,91 +91,91 @@ Initially created by [Rohit Ghumare](https://github.com/rohitg00/) on [Twitter](
 
 ### I
 
-* [IaC Thales](IaC%20Thales.pdf)
-* [IaC Terraform](IaC_Terraform.pdf)
-* [IBM Agile Dummies](IBM%20Agile%20Dummies.pdf)
-* [Implementing DevOps on AWS (2017)](Implementing_DevOps_on_AWS_(2017)
-* [Intro to Docker and Swarm - Vikram](Intro%20to%20Docker%20and%20Swarm%20-%20Vikram.pdf)
-* [Implementing_OpenShift.pdf](Implementing_OpenShift.pdf)
+* [IaC Thales](books/Iac_Thales.pdf)
+* [IaC Terraform](books/Iac_Terraform.pdf)
+* [IBM Agile Dummies](books/Ibm_Agile_Dummies.pdf)
+* [Implementing DevOps on AWS (2017)](books/Implementing_Devops_On_Aws_2017.pdf)
+* [Intro to Docker and Swarm - Vikram](books/Intro_To_Docker_And_Swarm_Vikram.pdf)
+* [Implementing_OpenShift.pdf](books/Implementing_Openshift.pdf)
 
 ### J
 
-* [Jenkins From Scratch](Jenkins%20From%20Scratch.pdf)
+* [Jenkins From Scratch](books/Jenkins_From_Scratch.pdf)
 
 ### K
 
-* [K8s Muhamad Eiemam](K8s_muhamad_eiemam.pdf)
-* [k8s cheat sheet](Kubernetes%20Cheat%20Sheet.pdf)
-* [k8s for every one](Kubernetes%20For%20Everyone.pdf)
+* [K8s Muhamad Eiemam](books/K8s_Muhamad_Eiemam.pdf)
+* [k8s cheat sheet](books/K8s_Cheat_Sheet.pdf)
+* [k8s for every one](books/K8s_For_Everyone.pdf)
 
 ### L
 
-* [Learning Docker](Learning%20Docker.pdf)
-* [Learning Groovy](Learning%20Groovy.pdf)
-* [Learning_Docker_Networking.pdf](Learning_Docker_Networking.pdf)
-* [Learning_OpenShift.pdf](Learning_OpenShift.pdf)
-* [Linux Command Line and Shell Scripting Bible by Richard Blum](2020712201111807Richard_Blum%2C_Christine_Bresnahan.pdf)
-* [Linux Command Line and Shell Scripting Bible by Wiley](Wiley.Linux.Command.Line.and.Shell.Scripting.Bible.May.2008.pdf)
+* [Learning Docker](books/Learning_Docker.pdf)
+* [Learning Groovy](books/Learning_Groovy.pdf)
+* [Learning_Docker_Networking.pdf](books/Learning_Docker_Networking.pdf)
+* [Learning_OpenShift.pdf](books/Learning_Openshift.pdf)
+* [Linux Command Line and Shell Scripting Bible by Richard Blum](books/Linux_Command_Line_And_Shell_Scripting_Bible_By_Richard_Blum.pdf)
+* [Linux Command Line and Shell Scripting Bible by Wiley](books/Linux_Command_Line_And_Shell_Scripting_Bible_By_Wiley.pdf)
 * [Linux Handbook](https://sourceforge.net/projects/linuxcommand/files/TLCL/19.01/TLCL-19.01.pdf/download)
-* [Linux Shell Scripting Cookbook.pdf](Linux%20Shell%20Scripting%20Cookbook.pdf)
-* [Load Balancing in the Cloud](Load%20balancing%20in%20th%20cloud.pdf)
+* [Linux Shell Scripting Cookbook.pdf](books/Linux_Shell_Scripting_Cookbook.pdf)
+* [Load Balancing in the Cloud](books/Load_Balancing_In_The_Cloud.pdf)
 
 ### M
 
-* [Making the most of Helm](Making%20the%20most%20of%20helm.pdf)
-* [Mastering Nginx.pdf](Mastering%20Nginx.pdf)
-* [Monitoring_Docker.pdf](Monitoring_Docker.pdf)
-* [Microservers Dell](Microservices_dell.pdf)
+* [Making the most of Helm](books/Making_The_Most_Of_Helm.pdf)
+* [Mastering Nginx.pdf](books/Mastering_Nginx.pdf)
+* [Monitoring_Docker.pdf](books/Monitoring_Docker.pdf)
+* [Microservers Dell](books/Microservers_Dell.pdf)
 
 ### N
 
-* [Nginx Essentials.pdf](Nginx%20Essentials.pdf)
-* [Nginx Module Extension.pdf](Nginx%20Module%20Extension.pdf)
+* [Nginx Essentials.pdf](books/Nginx_Essentials.pdf)
+* [Nginx Module Extension.pdf](books/Nginx_Module_Extension.pdf)
 
 ### O
 
 * [O'Reilly An Introduction to Cloud Databases](https://media-exp1.licdn.com/dms/document/C4D1FAQGi94BbMABNLw/feedshare-document-pdf-analyzed/0/1661090973570?e=1661990400&v=beta&t=R3ZNMec8rbU67lyw1wePYcnJm2wsjHkSxfBP2_1yYbY)
-* [O'Reilly Kubernetes Up and Running](O'Reilly%20Kubernetes%20Up%20and%20Running.pdf)
-* [O'Reilly Kubernetes Patterns](O'Reilly%20Kubernetes%20Up%20and%20Running.pdf)
+* [O'Reilly Kubernetes Up and Running](books/Oreilly_Kubernetes_Up_And_Running.pdf)
+* [O'Reilly Kubernetes Patterns](books/Oreilly_Kubernetes_Patterns.pdf)
 * [O'Reilly Software Architecture Patterns](https://media-exp1.licdn.com/dms/document/C4D1FAQFXDNSQk3PSsA/feedshare-document-pdf-analyzed/0/1660642832168?e=1661385600&v=beta&t=LW46s1riQcdMGqRlyT04FtUYJ1PTlwXvhNtkEyAoQq8)
-* [O’Reilly Kubernetes patterns for designing cloud-native apps](https://red.ht/3LeB1Vb)
-* [OpenShift_in_Action.pdf](OpenShift_in_Action.pdf)
-* [Orchestrating_Docker.pdf](Orchestrating_Docker.pdf)
-* [O'Reilly Cloud Native DevOps with Kubernetes]([label](Cloud%20Native%20Devops%20with%20Kubernetes.pdf))
+* [O'Reilly Kubernetes patterns for designing cloud-native apps](https://red.ht/3LeB1Vb)
+* [OpenShift_in_Action.pdf](books/Openshift_In_Action.pdf)
+* [Orchestrating_Docker.pdf](books/Orchestrating_Docker.pdf)
+* [O'Reilly Cloud Native DevOps with Kubernetes](books/Oreilly_Cloud_Native_Devops_With_Kubernetes.pdf)
 
 ### P
 
-* [Practical DevOps](Practical%20DevOps.pdf)
-* [Pro Bash Programming.pdf](Pro%20Bash%20Programming.pdf)
-* [Pro_Docker.pdf](Pro_Docker.pdf)
-* [Python for Cloud](Python%20for%20cloud.pdf)
-* [Python for DevOps - Learn Ruthlessly Effective Automation Original](python-for-devops-learn-ruthlessly-effective-automation-original-retailnbsped-149205769x-978-1492057697.pdf)
-* [PythonNotesForProfessionals](PythonNotesForProfessionals.pdf)
+* [Practical DevOps](books/Practical_Devops.pdf)
+* [Pro Bash Programming.pdf](books/Pro_Bash_Programming.pdf)
+* [Pro_Docker.pdf](books/Pro_Docker.pdf)
+* [Python for Cloud](books/Python_For_Cloud.pdf)
+* [Python for DevOps - Learn Ruthlessly Effective Automation Original](books/Python_For_Devops_Learn_Ruthlessly_Effective_Automation_Original.pdf)
+* [PythonNotesForProfessionals](books/Python_Notes_For_Professionals.pdf)
 * [Practice 250 Questions For Terraform Associate Certification](https://media-exp1.licdn.com/dms/document/C4D1FAQF60GW8Wzx5Gg/feedshare-document-pdf-analyzed/0/1661091052718?e=1661990400&v=beta&t=CWQn8jnj_qPJcg8jFp-aqAk1sj3I2Dz3tc_ZcQYn4Zw)
 
 ### S
 
-* [Securing_Docker.pdf](Securing_Docker.pdf)
-* [Security Practices EKS](Security%20Practices%20EKS.pdf)
-* [Shell Scripting.pdf](Shell%20Scripting.pdf)
-* [Site Reliability Engineering](Site%20Reliability%20Engineering.pdf)
-* [State of Devops 2021](State%20of%20DevOps%202021.pdf)
+* [Securing_Docker.pdf](books/Securing_Docker.pdf)
+* [Security Practices EKS](books/Security_Practices_Eks.pdf)
+* [Shell Scripting.pdf](books/Shell_Scripting.pdf)
+* [Site Reliability Engineering](books/Site_Reliability_Engineering.pdf)
+* [State of Devops 2021](books/State_Of_Devops_2021.pdf)
 * [SWE Book by Alex Xu](https://abseil.io/resources/swe-book)
 
 ### T
 
-* [Terraform](Terraform.pdf)
-* [Terraform CLI Cheatsheet - 1](1622257225661.pdf)
-* [Terrafprm CLI Cheatsheet - 2](terraform-cheatsheet-1.pdf)
-* [The Definitive Kubectl Cheatsheet](the-definitive-kubectl-cheatsheet)
-* [The NewStack CI CD](TheNewStack_CI_CD.pdf)
-* [The Kubernetes Book (Nigel Poulton)](The%20Kubernetes%20Book%20(Nigel%20Poulton)%20(z-lib.org).pdf)
-* [Top 200 Questions Devops](Top%20200%20questions%20DevOps.pdf)
-* [Using_Docker.pdf](Using_Docker.pdf)
+* [Terraform](books/Terraform.pdf)
+* [Terraform CLI Cheatsheet - 1](books/Terraform_Cli_Cheatsheet_1.pdf)
+* [Terraform CLI Cheatsheet - 2](books/Terraform_Cli_Cheatsheet_2.pdf)
+* [The Definitive Kubectl Cheatsheet](books/The_Definitive_Kubectl_Cheatsheet.pdf)
+* [The NewStack CI CD](books/The_Newstack_Ci_Cd.pdf)
+* [The Kubernetes Book (Nigel Poulton)](books/The_Kubernetes_Book_Nigel_Poulton.pdf)
+* [Top 200 Questions Devops](books/Top_200_Questions_Devops.pdf)
+* [Using_Docker.pdf](books/Using_Docker.pdf)
 
 ### W
 
-* [Wavestone Devops](Wavestone%20devops.pdf)
+* [Wavestone Devops](books/Wavestone_Devops.pdf)
 
 ## Thanks
 
