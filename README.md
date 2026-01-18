@@ -27,9 +27,6 @@ Initially created by [Rohit Ghumare](https://github.com/rohitg00/) on [Twitter](
 
 ---
 
----
-
-
 ## 🌐 Static Website
 
 This project includes support for a static website deployed using **GitHub Pages** and **Netlify**.
