@@ -14,7 +14,7 @@ const listItems = files.map(file => {
   // const displayName = file.replace(/\.pdf$/i, "").replace(/_/g, " ");  // remove .pdf (case-insensitive) and replace underscores with spaces
   const  displayName = file.replace(/\.pdf$/i, "").replace(/_/g, " ").replace(/[_-]+/g, " ").replace(/\s+/g, " ").trim(); // improved display name formatting
   return `<div class="card">
-  <a href="${encoded}" target="_blank">${displayName}</a></div>`;
+  <a href="books/${encoded}" target="_blank">${displayName}</a></div>`;
 }).join("\n");
 
 const output = TEMPLATE.replace("{{BOOK_LIST}}", listItems);
