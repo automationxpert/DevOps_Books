@@ -82,11 +82,13 @@ Initially created by [Rohit Ghumare](https://github.com/rohitg00/) on [Twitter](
 ### G
 
 * [GIT Notes for Professionals](books/Git_Notes_For_Professionals.pdf)
+* [Git Interview Questions](books/Git_Interview_Questions.pdf)
 * [Github Cheatsheets](books/Github_Cheatsheets.pdf)
 * [Getting_Started_with_OpenShift.pdf](books/Getting_Started_With_Openshift.pdf)
 
 ### H
 
+* [Hands On Kubernetes with Azure](books/Hands_On_Kubernetes_With_Azure.pdf)
 * [Helm 101: Tame the chaos of your Kubernetes apps with Helm charts](https://media-exp1.licdn.com/dms/document/C4D1FAQEvLyiTpuYr2w/feedshare-document-pdf-analyzed/0/1660668656459?e=1661385600&v=beta&t=geS4gxgn7EsIPjARpLj4l6CcLmMXIhKkth8RbcaE26c)
 
 ### I
@@ -95,6 +97,7 @@ Initially created by [Rohit Ghumare](https://github.com/rohitg00/) on [Twitter](
 * [IaC Terraform](books/Iac_Terraform.pdf)
 * [IBM Agile Dummies](books/Ibm_Agile_Dummies.pdf)
 * [Implementing DevOps on AWS (2017)](books/Implementing_Devops_On_Aws_2017.pdf)
+* [Important DevOps Interview Questions](books/Important_Devops_Interview_Questions.pdf)
 * [Intro to Docker and Swarm - Vikram](books/Intro_To_Docker_And_Swarm_Vikram.pdf)
 * [Implementing_OpenShift.pdf](books/Implementing_Openshift.pdf)
 
