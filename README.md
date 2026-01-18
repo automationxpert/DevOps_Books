@@ -27,6 +27,31 @@ Initially created by [Rohit Ghumare](https://github.com/rohitg00/) on [Twitter](
 
 ---
 
+---
+
+
+## 🌐 Static Website
+
+This project includes support for a static website deployed using **GitHub Pages** and **Netlify**.
+
+### 🔗 Live Links
+
+* **GitHub Pages:**
+  👉 https://automationxpert.github.io/DevOps_Books/
+
+  * **Netlify:**
+    👉 https://devops-books.netlify.app/
+
+    Both deployments serve the same static site generated from this repository.
+
+    ---
+
+    ### 🛠 Deployment Notes (optional but useful)
+
+    * GitHub Pages is deployed via **GitHub Actions**
+    * Netlify can be configured to deploy automatically from the `main` branch or via manual upload
+---
+
 ## Book List
 
 ### A
