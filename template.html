@@ -3,248 +3,381 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DevOps Books Library</title>
+<title>DevOps Books Library | Automation Expert</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ---------- THEME VARIABLES ---------- */
 :root {
-  --bg: #0b1220;
+  --bg: #030712;
   --surface: #111827;
   --card: #1f2937;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
+  --text: #f3f4f6;
+  --text-muted: #9ca3af;
   --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
   --border: #374151;
+  --header-bg: rgba(17, 24, 39, 0.8);
+  --success: #10b981;
+  --warning: #f59e0b;
 }
 
-.light {
+[data-theme="light"] {
   --bg: #f8fafc;
   --surface: #ffffff;
-  --card: #f1f5f9;
+  --card: #ffffff;
   --text: #0f172a;
-  --muted: #475569;
+  --text-muted: #64748b;
   --accent: #2563eb;
+  --accent-glow: rgba(37, 99, 235, 0.08);
   --border: #e2e8f0;
+  --header-bg: rgba(255, 255, 255, 0.8);
 }
 
-/* ---------- BASE ---------- */
-* {
-  box-sizing: border-box;
-}
-
+* { box-sizing: border-box; transition: background-color 0.2s, border-color 0.2s; }
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background: var(--bg);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg);
   color: var(--text);
 }
 
-/* ---------- HEADER ---------- */
+/* ---------- HEADER & STATS ---------- */
 header {
-  background: linear-gradient(135deg, #020617, #0f172a);
-  padding: 50px 20px 40px;
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 30px 20px;
   border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.header-inner {
-  max-width: 1400px;
-  margin: auto;
+.header-inner { max-width: 1200px; margin: auto; }
+.top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+h1 { margin: 0; font-size: 1.5rem; font-weight: 800; background: linear-gradient(to right, var(--accent), #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.stats-ribbon {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding: 12px;
+  background: var(--accent-glow);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-.top-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+.stat-item span { color: var(--accent); margin-right: 5px; }
 
-h1 {
-  margin: 0;
-  font-size: 2.2rem;
-}
-
-.subtitle {
-  color: var(--muted);
-  max-width: 900px;
-  line-height: 1.6;
-}
-
-/* ---------- CONTROLS ---------- */
-.controls {
-  display: flex;
+/* ---------- TOOLBAR ---------- */
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
   gap: 12px;
-  margin-top: 15px;
-  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-#search {
+input, select {
   padding: 10px 14px;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
-  width: 280px;
+  font-family: inherit;
+  outline: none;
 }
 
-#search::placeholder {
-  color: var(--muted);
-}
-
-.theme-toggle {
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  cursor: pointer;
-}
+input:focus { border-color: var(--accent); }
 
 /* ---------- GRID ---------- */
-main {
-  max-width: 1400px;
-  margin: auto;
-  padding: 40px 20px 60px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-}
+main { max-width: 1200px; margin: auto; padding: 40px 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
 
 /* ---------- BOOK CARD ---------- */
 .card {
   background: var(--card);
-  border-radius: 10px;
-  padding: 16px;
+  border-radius: 14px;
+  padding: 20px;
   border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+  height: 100%;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-}
+.card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(0,0,0,0.5); }
 
-.card a {
-  color: var(--text);
+.card-title {
   text-decoration: none;
-  font-weight: 500;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1rem;
   line-height: 1.4;
-  word-break: break-word;
+  margin-bottom: 15px;
+  display: block;
 }
 
-.badge {
-  margin-top: 12px;
-  font-size: 0.75rem;
-  color: var(--muted);
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 15px; }
+.tag { font-size: 0.65rem; padding: 2px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase; background: var(--border); }
+
+.status-select { font-size: 0.75rem; padding: 5px; width: 100%; margin-top: auto; cursor: pointer; border-radius: 6px; }
+
+.new-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--success);
+  color: white;
+  font-size: 0.6rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 900;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
 }
+
+/* ---------- PAGINATION ---------- */
+.pagination-controls {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
 /* ---------- FOOTER ---------- */
-footer {
-  border-top: 1px solid var(--border);
-  background: var(--surface);
-  padding: 30px 20px;
-}
+footer { border-top: 1px solid var(--border); padding: 40px 20px; background: var(--surface); text-align: center; font-size: 0.9rem; color: var(--text-muted); }
+footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
 
-.footer-inner {
-  max-width: 1400px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 1400px) {
-  .grid { grid-template-columns: repeat(4, 1fr); }
-}
-@media (max-width: 1100px) {
-  .grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 800px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 480px) {
-  .grid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  .toolbar { grid-template-columns: 1fr; }
+  .stats-ribbon { flex-direction: column; gap: 8px; }
 }
 </style>
-
-<script>
-/* ---------- SEARCH ---------- */
-function searchBooks() {
-  const q = document.getElementById("search").value.toLowerCase();
-  document.querySelectorAll(".card").forEach(card => {
-    card.style.display = card.innerText.toLowerCase().includes(q) ? "" : "none";
-  });
-}
-
-/* ---------- THEME ---------- */
-function toggleTheme() {
-  const root = document.documentElement;
-  const isLight = root.classList.toggle("light");
-  localStorage.setItem("theme", isLight ? "light" : "dark");
-  document.getElementById("themeBtn").innerText = isLight ? "🌙 Dark" : "☀️ Light";
-}
-
-(function initTheme() {
-  const saved = localStorage.getItem("theme");
-  if (saved === "light") {
-    document.documentElement.classList.add("light");
-  }
-})();
-</script>
 </head>
-
-<body>
+<body data-theme="dark">
 
 <header>
   <div class="header-inner">
-    <div class="top-row">
-      <h1>📘 DevOps Books Library</h1>
-      <button id="themeBtn" class="theme-toggle" onclick="toggleTheme()">☀️ Light</button>
+    <div class="top-bar">
+      <h1>📘 DevOps Library</h1>
+      <select id="themeSelect" onchange="setTheme(this.value)">
+        <option value="system">🌓 System</option>
+        <option value="light">☀️ Light</option>
+        <option value="dark">🌙 Dark</option>
+      </select>
     </div>
 
-    <p class="subtitle">
-      A curated, auto-updating collection of DevOps, Cloud, Kubernetes,
-      Docker, CI/CD, Terraform, Linux, and SRE books — generated on every deployment.
-    </p>
+    <div class="stats-ribbon">
+      <div class="stat-item"><span id="stat-total">0</span> Total Books</div>
+      <div class="stat-item"><span id="stat-reading">0</span> In Progress</div>
+      <div class="stat-item"><span id="stat-completed">0</span> Completed</div>
+    </div>
 
-    <div class="controls">
-      <input
-        id="search"
-        type="text"
-        placeholder="Search books…"
-        onkeyup="searchBooks()"
-      />
+    <div class="toolbar">
+      <input id="search" type="text" placeholder="Search titles..." onkeyup="handleFilter()">
+      <select id="filterStatus" onchange="handleFilter()">
+        <option value="all">All Status</option>
+        <option value="unread">Unread</option>
+        <option value="progress">In Progress</option>
+        <option value="completed">Completed</option>
+      </select>
+      <select id="pageSize" onchange="changePageSize(this.value)">
+        <option value="10">10 per page</option>
+        <option value="25" selected>25 per page</option>
+        <option value="50">50 per page</option>
+        <option value="100">100 per page</option>
+        <option value="all">Show All</option>
+      </select>
     </div>
   </div>
 </header>
 
 <main>
-  <div class="grid">
-    {{BOOK_LIST}}
+  <div id="bookGrid" class="grid"></div>
+  
+  <div class="pagination-controls">
+    <button class="btn" id="prevBtn" onclick="changePage(-1)">Previous</button>
+    <span id="pageInfo">Page 1 of 1</span>
+    <button class="btn" id="nextBtn" onclick="changePage(1)">Next</button>
   </div>
 </main>
 
+<div id="raw-data" style="display:none;">{{BOOK_LIST}}</div>
+
 <footer>
-  <div class="footer-inner">
-    <div>
-      Built with ❤️ by <a href="https://automationexpert.dpdns.org" target="_blank" rel="noopener">AutomationExpert</a>
-    </div>
-    <div>
-      Automatically updated • No tracking • Fast & simple
-    </div>
-  </div>
+  <p>Built & Maintained by <a href="https://flexboxpro.netlify.app" target="_blank">Automation Expert</a></p>
+  <p>&copy; 2026 All rights reserved • <a href="https://automationexpert.dpdns.org">AutomationExpert</a></p>
 </footer>
 
+<script>
+let allBooks = [];
+let filteredBooks = [];
+let currentPage = 1;
+let itemsPerPage = 25;
+
+// KEYWORD TAGS CONFIG
+const tagRules = {
+  'K8s': ['kubernetes', 'k8s', 'helm'],
+  'Cloud': ['aws', 'azure', 'gcp', 'cloud'],
+  'DevOps': ['docker', 'ci/cd', 'jenkins', 'pipeline', 'git'],
+  'IaC': ['terraform', 'ansible', 'pulumi', 'chef'],
+  'Linux': ['linux', 'ubuntu', 'bash', 'shell'],
+  'Security': ['security', 'hacking', 'devsecops']
+};
+
+function init() {
+  const rawLinks = document.querySelectorAll('#raw-data a');
+  allBooks = Array.from(rawLinks).map((link, index) => {
+    const title = link.innerText.trim();
+    return {
+      title: title,
+      url: link.href,
+      id: btoa(title).substring(0, 16), // simple unique id
+      isNew: index < 5 // Mark first 5 in list as new (assumed recent git order)
+    };
+  });
+
+  // Sort A-Z
+  allBooks.sort((a, b) => a.title.localeCompare(b.title));
+  
+  applyTheme();
+  handleFilter();
+  updateStats();
+}
+
+function handleFilter() {
+  const query = document.getElementById('search').value.toLowerCase();
+  const statusFilter = document.getElementById('filterStatus').value;
+  
+  filteredBooks = allBooks.filter(book => {
+    const status = localStorage.getItem(`status_${book.id}`) || 'unread';
+    const matchesSearch = book.title.toLowerCase().includes(query);
+    const matchesStatus = statusFilter === 'all' || status === statusFilter;
+    return matchesSearch && matchesStatus;
+  });
+
+  currentPage = 1;
+  renderGrid();
+}
+
+function renderGrid() {
+  const grid = document.getElementById('bookGrid');
+  grid.innerHTML = '';
+  
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = itemsPerPage === 'all' ? filteredBooks.length : start + parseInt(itemsPerPage);
+  const pageItems = filteredBooks.slice(start, end);
+
+  pageItems.forEach(book => {
+    const status = localStorage.getItem(`status_${book.id}`) || 'unread';
+    const card = document.createElement('div');
+    card.className = 'card';
+    
+    // Auto-tagging logic
+    let tagsHTML = '';
+    for (const [tag, keywords] of Object.entries(tagRules)) {
+      if (keywords.some(k => book.title.toLowerCase().includes(k))) {
+        tagsHTML += `<span class="tag">${tag}</span>`;
+      }
+    }
+
+    card.innerHTML = `
+      ${book.isNew ? '<span class="new-badge">NEW</span>' : ''}
+      <div class="card-tags">${tagsHTML}</div>
+      <a href="${book.url}" target="_blank" class="card-title">${book.title}</a>
+      <select class="status-select" onchange="updateBookStatus('${book.id}', this.value)">
+        <option value="unread" ${status === 'unread' ? 'selected' : ''}>📁 Unread</option>
+        <option value="progress" ${status === 'progress' ? 'selected' : ''}>⏳ In Progress</option>
+        <option value="completed" ${status === 'completed' ? 'selected' : ''}>✅ Completed</option>
+      </select>
+    `;
+    grid.appendChild(card);
+  });
+
+  updatePaginationUI();
+}
+
+function updateBookStatus(id, status) {
+  localStorage.setItem(`status_${id}`, status);
+  updateStats();
+  if (document.getElementById('filterStatus').value !== 'all') handleFilter();
+}
+
+function updateStats() {
+  document.getElementById('stat-total').innerText = allBooks.length;
+  let progress = 0, completed = 0;
+  allBooks.forEach(b => {
+    const s = localStorage.getItem(`status_${b.id}`);
+    if(s === 'progress') progress++;
+    if(s === 'completed') completed++;
+  });
+  document.getElementById('stat-reading').innerText = progress;
+  document.getElementById('stat-completed').innerText = completed;
+}
+
+function changePageSize(val) {
+  itemsPerPage = val === 'all' ? 'all' : parseInt(val);
+  currentPage = 1;
+  renderGrid();
+}
+
+function changePage(dir) {
+  currentPage += dir;
+  renderGrid();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function updatePaginationUI() {
+  const totalPages = itemsPerPage === 'all' ? 1 : Math.ceil(filteredBooks.length / itemsPerPage);
+  document.getElementById('pageInfo').innerText = `Page ${currentPage} of ${totalPages || 1}`;
+  document.getElementById('prevBtn').disabled = currentPage <= 1;
+  document.getElementById('nextBtn').disabled = currentPage >= totalPages;
+  document.querySelector('.pagination-controls').style.display = itemsPerPage === 'all' ? 'none' : 'flex';
+}
+
+// Theme Logic
+function setTheme(theme) {
+  if (theme === 'system') {
+    localStorage.removeItem('pref_theme');
+    applyTheme();
+  } else {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('pref_theme', theme);
+  }
+}
+
+function applyTheme() {
+  const saved = localStorage.getItem('pref_theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+    document.getElementById('themeSelect').value = saved;
+  } else {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    document.getElementById('themeSelect').value = 'system';
+  }
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  if (!localStorage.getItem('pref_theme')) applyTheme();
+});
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
 </body>
 </html>
